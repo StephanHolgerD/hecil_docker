@@ -1,4 +1,5 @@
 FROM python:2.7-stretch
+LABEL maintainer="stephan.drukewitz@ime.fraunhofer.de"
 WORKDIR /opt/hecil
 RUN git clone https://github.com/NDBL/HECIL.git ;\
     pip install numpy ;\
@@ -7,4 +8,3 @@ RUN git clone https://github.com/NDBL/HECIL.git ;\
     rm LongRead.fa ShortRead.fq
 
 WORKDIR /opt/hecil/HECIL
-#WORKDIR /data
